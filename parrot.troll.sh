@@ -1,14 +1,20 @@
 #!/bin/bash
 
-# Append the lines to the .zshrc file
-echo "" >> ~/.zshrc
-echo "# Parrot alias" >> ~/.zshrc
-echo "alias parrot=\"echo 'You have been trolled by the parrot!'\"" >> ~/.zshrc
-echo "" >> ~/.zshrc
+# Define the code you want to inject
+code_to_inject=$(cat <<'EOF'
+# Custom aliases
+alias ll='ls -la'
+alias gs='git status'
 
-# Reload the .zshrc to apply changes immediately
-source ~/.zshrc
+# Add custom path
+export PATH="$HOME/bin:$PATH"
+EOF
+)
 
-# Optional: Print a message
-echo "Parrot alias added to your .zshrc!"
-
+# Check if the code is already in .zshrc to prevent duplicates
+if ! grep -q "$code_to_inject" ~/.zshrc; then
+    echo "$code_to_inject" >> ~/.zshrc
+    echo "Code injected into ~/.zshrc"
+else
+    echo "Code already exists in ~/.zshrc"
+fi
