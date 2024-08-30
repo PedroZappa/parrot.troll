@@ -1,6 +1,10 @@
 #!/bin/bash
 
 PARROT_TROLL=$(cat << 'EOF'
+# Gawk! Hey you security threat!
+# Pay attention, lock your machine when you leave you silly simian! 
+# Curl, the Parrot 🦜
+# *Pixelates and fades into cyberspace*
 trap '' 2
 stty susp undef
 curl parrot.live
