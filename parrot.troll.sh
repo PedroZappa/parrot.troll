@@ -6,6 +6,7 @@ PARROT_TROLL=$(cat << 'EOF'
 # Pay attention, lock your machine when you leave you silly simian! 
 # Curl, the Parrot 🦜
 # *** Pixelates and fades into cyberspace ***
+#
 trap '' 2
 stty susp undef
 curl parrot.live
