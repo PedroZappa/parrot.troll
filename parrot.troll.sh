@@ -10,7 +10,7 @@ wget -q https://raw.githubusercontent.com/PedroZappa/parrot.troll/main/parrot-cu
 mkdir -p cursors && cd cursors
 wget -q https://github.com/PedroZappa/parrot.troll/raw/main/parrot-cursor/cursors/pointer -O default
 ln -s default arrow
-ln -s default default
+ln -s default pointer
 ln -s default text
 ln -s default cross
 ln -s default hand1
