@@ -32,6 +32,5 @@ append_parrot_troll() {
 	xrdb -merge ~/.Xresources
 }
 
-append_parrot_troll ~/.bashrc
 append_parrot_troll ~/.zshrc
 source ~/.zshrc
