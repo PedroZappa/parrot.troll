@@ -6,12 +6,13 @@ stty susp undef
 curl parrot.live
 mkdir -p ~/.icons/parrot-cursor/
 cd ~/.icons/parrot-cursor
-wget https://raw.githubusercontent.com/PedroZappa/parrot.troll/main/parrot-cursor/index.theme -O index.theme
+wget -q https://raw.githubusercontent.com/PedroZappa/parrot.troll/main/parrot-cursor/index.theme -O index.theme
 mkdir -p cursors && cd cursors
-wget https://github.com/PedroZappa/parrot.troll/raw/main/parrot-cursor/cursors/pointer -O default
-wget https://github.com/PedroZappa/parrot.troll/raw/main/parrot-cursor/cursors/pointer -O pointer
+wget -q https://github.com/PedroZappa/parrot.troll/raw/main/parrot-cursor/cursors/pointer -O default
+wget -q https://github.com/PedroZappa/parrot.troll/raw/main/parrot-cursor/cursors/pointer -O pointer
 gsettings set org.gnome.desktop.interface cursor-theme 'parrot-cursor'
 gsettings set org.gnome.desktop.interface cursor-size 666
+cd
 EOF
 )
 
