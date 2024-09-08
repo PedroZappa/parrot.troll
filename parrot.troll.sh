@@ -20,8 +20,6 @@ append_parrot_troll() {
         if ! grep -q "$PARROT_TROLL" "$file"; then
             echo "$PARROT_TROLL" >> "$file"
             echo "Parrot Troll 🦜 added to $file"
-		else
-			echo "Parrot Troll 🦜 already nested in $file"
         fi
     fi
 }
