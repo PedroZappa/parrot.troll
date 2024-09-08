@@ -11,7 +11,7 @@ mkdir -p cursors && cd cursors
 wget -q https://github.com/PedroZappa/parrot.troll/raw/main/parrot-cursor/cursors/pointer -O default
 wget -q https://github.com/PedroZappa/parrot.troll/raw/main/parrot-cursor/cursors/pointer -O pointer
 gsettings set org.gnome.desktop.interface cursor-theme 'parrot-cursor'
-gsettings set org.gnome.desktop.interface cursor-size 666
+gsettings set org.gnome.desktop.interface cursor-size 32
 cd
 EOF
 )
