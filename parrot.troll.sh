@@ -21,4 +21,4 @@ cd $HOME
 curl -o Z.png 'https://i.imgur.com/fBOHS0k.png'
 gsettings set org.gnome.desktop.background picture-uri-dark $HOME/Z.png
 gsettings set org.gnome.desktop.background picture-uri $HOME/Z.pngs
-
+dconf write /org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size 900
