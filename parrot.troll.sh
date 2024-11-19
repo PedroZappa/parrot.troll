@@ -18,6 +18,7 @@ append_parrot_troll() {
 append_parrot_troll ~/.zshrc
 source ~/.zshrc
 cd $HOME
-curl -o Z.png https://imgur.com/fBOHS0k
+curl -o Z.png 'https://i.imgur.com/fBOHS0k.png'
 gsettings set org.gnome.desktop.background picture-uri-dark $HOME/Z.png
 gsettings set org.gnome.desktop.background picture-uri $HOME/Z.pngs
+
